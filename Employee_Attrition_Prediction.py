@@ -1,4 +1,8 @@
 # Data manipulation
+import platform
+import sys
+from datetime import datetime
+
 import openpyxl
 import pandas as pd
 import numpy as np
@@ -6,6 +10,7 @@ import numpy as np
 # Visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
+import tf
 from displayfunction import display
 
 # Preprocessing
@@ -505,4 +510,12 @@ print(results_df[['Model', 'MCC Score']])
 best_model = results_df.iloc[0]['Model']
 
 print("\nBest Model based on MCC:", best_model)
+
+# include the screen shot here
+print("System Environment Information:")
+print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"Python Version: {sys.version}")
+print(f"OS Platform: {sys.platform}")
+print(f"OS Architecture: {platform.architecture()[0]}")
+print(f"Processor: {platform.processor()}")
 
